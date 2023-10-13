@@ -1,0 +1,21 @@
+{{>layout/header}}
+
+<!-- form tag에서 action : URL 연결주소로 폼 데이터를 보낸다.-->
+<!-- method : 폼에서 데이터를 보낼 때 일반적으로 post를 사용-->
+<!-- form 태그 내부 input 등의 태그에 name 속성으로 데이터 이름 식별-->
+<form class="container" action="/members/join" method="post">
+    <div class="mb-3">
+        <label class="form-label">이메일</label>
+        <input class="form-control" type="text" name="email">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">비밀번호</label>
+        <textarea type = "password" class="form-control" rows="3" name="content"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">확인</button>
+    <a href="/members"><button class="btn btn-secondary">뒤로가기</button></a>
+</form>
+
+{{>layout/footer}}

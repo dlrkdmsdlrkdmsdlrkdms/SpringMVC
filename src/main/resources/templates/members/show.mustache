@@ -1,0 +1,25 @@
+{{>layout/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">email</th>
+        <th scope="col">password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 객체 데이터를 사용하는 범위  -->
+    {{#member}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{email}}</td>
+            <td>{{password}}</td>
+        </tr>
+    {{/member}}
+    <!-- 객체 데이터를 사용하는 범위  -->
+    </tbody>
+</table>
+<a href="/articles/{{member.id}}/edit" class="btn-secondary">수정💎</a>
+<a href="/articles" class="btn-secondary">글 목록:📦</a>
+{{>layout/footer}}
